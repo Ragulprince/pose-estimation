@@ -1,0 +1,14 @@
+conda create -n yolov7_pose
+
+
+conda activate yolov7_pose
+
+python detect.py --weights yolov7-w6-pose.pt --kpt-label --hide-labels --hide-conf --source football1.mp4 --line-thickness 10
+
+
+pip install -r requirements.txt
+
+pip install pycocotools
+
+pip install onnxruntime==1.10.0
+
