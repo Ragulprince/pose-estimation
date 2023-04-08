@@ -1,0 +1,28 @@
+conda create -n yolov7_pose
+This command creates a new Conda environment called "yolov7_pose".
+A Conda environment is a self-contained workspace that can contain its own packages, dependencies, and configurations. Creating a new environment is often a good practice when working with Python because it allows you to isolate the dependencies for different projects.
+
+conda activate yolov7_pose
+This command activates the newly created "yolov7_pose" environment, which sets up the environment to use the packages and dependencies installed within that environment.
+
+pip install -r requirements.txt
+This command installs the Python packages listed in the "requirements.txt" file. This file typically contains a list of all the packages needed to run the YOLOv7 pose detection program.
+
+pip install pycocotools
+This command installs the Python API for the Microsoft COCO dataset, which is used for object detection and segmentation tasks.
+The YOLOv7 pose detection program uses this package to load the COCO keypoint labels and perform other tasks related to object detection.
+
+pip install onnxruntime==1.10.0
+This command installs the ONNX Runtime package, which is used for high-performance inference of machine learning models.
+The YOLOv7 pose detection program uses this package to perform inference on the trained YOLOv7 model.
+
+python detect.py --weights yolov7-w6-pose.pt --kpt-label --hide-labels --hide-conf --source football1.mp4 --line-thickness 10
+This command runs the YOLOv7 pose detection program. The "detect.py" script is the main entry point for the program. 
+The "--weights" flag specifies the location of the trained YOLOv7 model weights file.
+The "--kpt-label", "--hide-labels", and "--hide-conf" flags control the display of output labels and confidence scores.
+The "--source" flag specifies the input video file to be processed. 
+The "--line-thickness" flag controls the thickness of the lines drawn on the output video to indicate the detected poses.
+
+
+
+
